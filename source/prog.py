@@ -2,16 +2,20 @@
 # -*- coding: UTF-8 -*-
 import argparse
 import csv
-
+import doctest
 import sys
 
-FILE='test.csv'
+FILE='/home/learngit/python_test/source/test.csv'
 savedata=[]
 datalen=0
 headers=['account','pwd']
 
 #function_switch={'i':insertdata(),'l':listdata(),'g':getdata(),'d':deldata()}
 def insertdata():
+    ''' test insetdata
+    >>> readcsv()
+    >>> insertdata()
+    '''
     global datalen
     name=raw_input("input you name:\n")
     passwd=raw_input("input passwd:\n")
@@ -38,6 +42,14 @@ def insertdata():
 
 
 def listdata():
+    ''' test listdata
+    >>> readcsv()
+    >>> listdata()
+    email iopnwer1231
+    din inf
+    qq ung
+    *****listdata*****
+    '''
     for row in savedata:
         print row[headers[0]],row[headers[1]]
     print '*****listdata*****'
